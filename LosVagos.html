@@ -83,86 +83,137 @@
 <div id="formContainer">
   <form id="form" class="container m-4 pl-4" method="POST">
     <!-- Campos do formulário -->
-    <div class="field">
-      <label for="Nome" class="label">Nome</label>
-      <div class="control">
-        <select class="select" name="Nome" required style="width: 90%; max-width: 300px;">
-          <option value="" disabled selected>Selecione uma opção</option> <!-- Título inicial do seletor -->
-          <!-- Adicione as opções de nomes aqui -->
-          <!-- Continue adicionando opções conforme necessário -->
-        </select>
+    <div class="field" style="display: flex; justify-content: space-between;">
+      <div style="flex: 1;">
+        <label for="Nome" class="label">Nome</label>
+        <div class="control">
+          <select class="select" name="Nome" required style="width: 80%;">
+            <option value="" disabled selected>Carregando opções...</option>
+          </select>
+        </div>
       </div>
+     </div>   
+<div class="field is-grouped is-centered">
+    <div class="control">
+      <label for="ATM" class="label">ATM</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="ATM"
+        min="0"
+      />
     </div>
-    
-    <div class="field is-grouped">
-        <div class="control">
-          <label for="ATM" class="label">ATM</label>
-          <input
-            class="input"
-            type="number"
-            placeholder="Quantidade"
-            name="ATM"
-            min="0"
-          />
-        </div>
-        <div class="control">
-          <label for="Lojinha" class="label">Lojinha</label>
-          <input
-            class="input"
-            type="number"
-            placeholder="Quantidade"
-            name="Lojinha"
-            min="0"
-          />
-        </div>
-        <div class="control">
-          <label for="Entorpecentes" class="label">Entorpecentes</label>
-          <input
-            class="input"
-            type="number"
-            placeholder="Quantidade"
-            name="Entorpecentes"
-            min="0"
-          />
-        </div>
-        <div class="control">
-          <label for="Vendas" class="label">Vendas</label>
-          <input
-            class="input"
-            type="number"
-            placeholder="Quantidade"
-            name="Vendas"
-            min="0"
-          />
-        </div>
-      </div>
-      
-      <!-- Campos lado a lado para materiais -->
-      <div class="field is-grouped">
-        <div class="control">
-          <label for="Imagem" class="label">Imagem</label>
-          <input
-            class="input"
-            type="file"
-            id="imageUpload"
-            name="Imagem"
-            multiple
-            accept="image/*" 
-          />
-          <p class="help"><strong>Por favor, tenha cuidado com o tamanho em MB da imagem.<br>Não se esqueça de incluir os comprovantes (prints) do inventário do detido.</strong></p>
-        </div>
-        <div class="control">
-          <label for="Arquivo" class="label">Link</label>
-          <textarea
-            class="textarea"
-            name="Arquivo"
-            rows="1"
-            style="width: 300px;"
-            placeholder="Link das imagens aqui..."
-          ></textarea>
-          <p class="help"><strong>Faltou upar algumas imagens? utilize o link.</strong></p>
-        </div>
-      </div>
+    <div class="control">
+      <label for="Lojinha" class="label">Lojinha</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Lojinha"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Entorpecentes" class="label">Entorpecentes</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Entorpecentes"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Desmanche" class="label">Desmanche</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Desmanche"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Joalheira" class="label">Joalheira</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Joalheira"
+        min="0"
+      />
+    </div>
+</div>
+<div class="field is-grouped is-centered">
+    <div class="control">
+      <label for="Corrida" class="label">Corrida</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Corrida"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Presença em ação" class="label">Presença em ação</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Presença em ação"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Missão Semanal" class="label">Missão Semanal</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Missão Semanal"
+        min="0"
+      />
+    </div>
+    <div class="control">
+      <label for="Rotas" class="label">Rotas</label>
+      <input
+        class="input"
+        type="number"
+        placeholder="Quantidade"
+        name="Rotas"
+        min="0"
+      />
+    </div>
+</div>
+<!-- Campos lado a lado para materiais -->
+<div class="field is-grouped is-centered">
+    <div class="control">
+      <label for="Imagem" class="label">Imagem</label>
+      <input
+        class="input"
+        type="file"
+        id="imageUpload"
+        name="Imagem"
+        multiple
+        accept="image/*" 
+      />
+      <p class="help"><strong>Por favor, tenha cuidado com o tamanho em MB da imagem.<br>Não se esqueça de incluir os comprovantes (prints) do inventário do detido.</strong></p>
+    </div>
+    <div class="control">
+      <label for="Arquivo" class="label">Link</label>
+      <textarea
+        class="textarea"
+        name="Arquivo"
+        rows="1"
+        style="width: 300px;"
+        placeholder="Link das imagens aqui..."
+      ></textarea>
+      <p class="help"><strong>Faltou upar algumas imagens? utilize o link.</strong></p>
+    </div>
+</div>
+
 
       <div class="field has-text-centered">
         <div class="control">
@@ -227,21 +278,31 @@ function fetchSheetData() {
             action: 'getData' // Ação esperada no Google Apps Script
         },
         success: function(response) {
+            var select = $('.select'); // Selecionar o elemento <select>
+            select.empty(); // Limpar todas as opções existentes no select
+
             if (response && response.status === 'success') {
                 var data = response.data; // Acessa os dados diretamente da resposta
-                var select = $('.select'); // Selecionar o elemento select
-                select.empty(); // Limpar opções existentes
+                
+                // Adiciona a opção inicial
+                select.append('<option value="" disabled selected>Selecione uma opção</option>');
+                
+                // Adiciona opções dinâmicas
                 for (var i = 0; i < data.length; i++) {
                     var nomeA = data[i][0]; // Pega apenas a coluna A
-                    var option = $('<option></option>').val(data[i][0]).text(nomeA);
+                    var option = $('<option></option>').val(nomeA).text(nomeA);
                     select.append(option);
                 }
             } else {
                 console.error("Erro ao obter dados:", response.message);
+                select.append('<option value="" disabled>Erro ao carregar dados</option>');
             }
         },
         error: function(error) {
             console.error("Erro ao buscar dados da planilha:", error);
+            var select = $('.select');
+            select.empty();
+            select.append('<option value="" disabled>Erro ao carregar dados</option>');
         }
     });
 }
@@ -252,6 +313,7 @@ function fetchSheetData() {
     $(document).ready(function() {
         fetchSheetData();
     });
+
 
 document
   .getElementById("form")
@@ -318,8 +380,13 @@ document
           const materiais = [];
             if (formData.get("ATM")) materiais.push(`ATM: ${formData.get("ATM")}`);
             if (formData.get("Lojinha")) materiais.push(`Lojinha: ${formData.get("Lojinha")}`);
+			if (formData.get("Joalheira")) materiais.push(`Joalheira: ${formData.get("Joalheira")}`);
             if (formData.get("Entorpecentes")) materiais.push(`Entorpecentes: ${formData.get("Entorpecentes")}`);
-            if (formData.get("Vendas")) materiais.push(`Vendas: ${formData.get("Vendas")}`);
+            if (formData.get("Corrida")) materiais.push(`Corrida: ${formData.get("Corrida")}`);
+            if (formData.get("Desmanche")) materiais.push(`Desmanche: ${formData.get("Desmanche")}`);
+			if (formData.get("Presença em ação")) materiais.push(`Presença em ação: ${formData.get("Presença em ação")}`);
+			if (formData.get("Missão Semanal")) materiais.push(`Missão Semanal: ${formData.get("Missão Semanal")}`);
+			if (formData.get("Rotas")) materiais.push(`Rotas: ${formData.get("Rotas")}`);
 
       // Preparando os dados para o webhook do Discord
       const webhookURL =
